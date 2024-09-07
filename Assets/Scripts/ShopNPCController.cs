@@ -23,7 +23,7 @@ public class ShopNPCController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerManager.SetOtherAction = true;
-            // 상점과 인벤토리 켜주기
+
             playerManager.SetShowInvetoryCallBack?.Invoke(true);
             shopPanelController.gameObject.SetActive(true);
         }
@@ -34,9 +34,12 @@ public class ShopNPCController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerManager.SetOtherAction = false;
-            // 꺼주기
+
             playerManager.SetShowInvetoryCallBack?.Invoke(false);
             shopPanelController.gameObject.SetActive(false);
+
+            PreviewPanelManager.Instance.SetOnPreviewPanel = false;
+            PreviewPanelManager.Instance.SetIsDrag = false;
         }
     }
 }

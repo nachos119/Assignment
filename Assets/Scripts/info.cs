@@ -50,7 +50,6 @@ public class Item
 
         Sprite loadedSprite = Resources.Load<Sprite>("ItemImage/" + _name);
 
-        // 이미지가 정상적으로 로드되었을 경우 UI 이미지에 적용
         if (loadedSprite != null)
         {
             image = loadedSprite;

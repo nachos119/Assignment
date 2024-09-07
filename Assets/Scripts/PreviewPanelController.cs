@@ -42,6 +42,7 @@ public class PreviewPanelController : MonoBehaviour
         if (previewPanelManager.SetPreviewItem != null)
         {
             previewTitleText.text = previewPanelManager.SetPreviewItem.itemName;
+            previewExplanationText.text = previewPanelManager.SetPreviewItem.itemName;
             previewImage.sprite = previewPanelManager.SetPreviewItem.image;
         }
 

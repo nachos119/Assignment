@@ -26,6 +26,10 @@ public class GameSceneController : MonoBehaviour
 
     private void Start()
     {
+        Cursor.visible = false;
+
+        Cursor.lockState = CursorLockMode.Confined;
+
         nickNameSettingPanelController = Instantiate(nickNameSettingPanelController);
     }
 
@@ -44,7 +48,16 @@ public class GameSceneController : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.I))
         {
             if (!playerManager.SetOtherAction)
-                inventoryPanelController.gameObject.SetActive(!inventoryPanelController.gameObject.activeSelf);
+            {
+                if (inventoryPanelController.gameObject.activeSelf)
+                {
+                    inventoryPanelController.Show();
+                }
+                else
+                {
+                    inventoryPanelController.Hide();
+                }
+            }
         }
     }
 
@@ -70,6 +83,13 @@ public class GameSceneController : MonoBehaviour
 
     private void ShowInvetory(bool _isActive)
     {
-        inventoryPanelController.gameObject.SetActive(_isActive);
+        if(_isActive)
+        {
+            inventoryPanelController.Show();
+        }
+        else
+        {
+            inventoryPanelController.Hide();
+        }
     }
 }

@@ -35,10 +35,6 @@ public class InventorySlotController : SlotController
                     callBack?.Invoke(sellItem);
                     ItemManager.Instance.SetShopItemUpdateCallback?.Invoke(sellItem);
                 }
-                else
-                {
-                    Debug.Log("지정된 레이어에 속하지 않는 오브젝트입니다.");
-                }
             }
             else
             {
@@ -47,10 +43,6 @@ public class InventorySlotController : SlotController
                 if (hoveredObject != null)
                 {
                     // 장착
-                }
-                else
-                {
-                    Debug.Log("지정된 레이어에 속하지 않는 오브젝트입니다.");
                 }
             }
         }

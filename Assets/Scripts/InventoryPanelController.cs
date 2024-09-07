@@ -16,6 +16,18 @@ public class InventoryPanelController : MonoBehaviour
         SetData();
     }
 
+    public void Show()
+    {
+        Cursor.visible = true;
+        gameObject.SetActive(true);
+    }
+
+    public void Hide()
+    {
+        Cursor.visible = false;
+        gameObject.SetActive(false);
+    }
+
     private void SetData()
     {
         inventorySlotList = new List<InventorySlotController>(inventoryMaxCount);

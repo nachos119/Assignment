@@ -17,6 +17,8 @@ public class NickNameSettingPanelController : MonoBehaviour
         checkButton.interactable = false;
 
         Time.timeScale = 0;
+
+        Cursor.visible = true;
     }
 
     private void OnClickButton()
@@ -27,6 +29,8 @@ public class NickNameSettingPanelController : MonoBehaviour
         this.gameObject.SetActive(false);
 
         PlayerManager.Instance.SetUpdateNickName?.Invoke();
+
+        Cursor.visible = false;
     }
 
     private void UpdateNickNameInputField(string _text)

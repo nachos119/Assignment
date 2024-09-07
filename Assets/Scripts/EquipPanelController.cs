@@ -14,6 +14,8 @@ public class EquipPanelController : MonoBehaviour
 
     public void Show()
     {
+        Cursor.visible = true;
+
         UpdateEquip();
 
         this.gameObject.SetActive(true);
@@ -21,6 +23,8 @@ public class EquipPanelController : MonoBehaviour
 
     public void Hide()
     {
+        Cursor.visible = false;
+
         this.gameObject.SetActive(false);
     }
 

@@ -23,7 +23,6 @@ public class ItemManager : LazySingleton<ItemManager>
     {
         playerManager = PlayerManager.Instance;
 
-        // 아이템 데이터베이스에 아이템 추가
         items.Add(new Item("Hammer01", EItemType.Weapon));
         items.Add(new Item("Sword01", EItemType.Weapon));
         items.Add(new Item("Sword02", EItemType.Weapon));
@@ -37,7 +36,6 @@ public class ItemManager : LazySingleton<ItemManager>
         items.Add(new Item("Cloth3", EItemType.Armor));
         items.Add(new Item("Cloth4", EItemType.Armor));
 
-        // 임시 플레이어 기본세팅
         playerManager.SetEquipArray[(int)EEquip.RWeapon] = new Item("Sword01", EItemType.Weapon);
         playerManager.SetEquipArray[(int)EEquip.Armor] = new Item("Cloth1", EItemType.Armor);
     }

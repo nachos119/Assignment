@@ -24,7 +24,6 @@ public class SlotController : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         {
             PreviewPanelManager.Instance.SetPreviewItem = item;
             PreviewPanelManager.Instance.SetIsDrag = true;
-            Debug.Log($"{item.itemName} 드래그 시작");
         }
     }
 
@@ -39,7 +38,6 @@ public class SlotController : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         {
             PreviewPanelManager.Instance.SetPreviewItem = item;
             PreviewPanelManager.Instance.SetIsDrag = true;
-            Debug.Log($"{item.itemName} 드래그 중");
         }
     }
 
@@ -55,7 +53,6 @@ public class SlotController : MonoBehaviour, IPointerEnterHandler, IPointerExitH
             PreviewPanelManager.Instance.SetPreviewItem = item;
 
             PreviewPanelManager.Instance.SetIsDrag = false;
-            Debug.Log($"{item.itemName} 드래그 끝");
         }
     }
 

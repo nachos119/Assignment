@@ -28,14 +28,6 @@ public class EquipSlotController : SlotController
 
             if (hoveredObject != null)
             {
-                // 해당 오브젝트의 레이어가 dropLayerMask에 속해 있는지 체크
-                Debug.Log("드래그 종료 지점의 오브젝트는 지정된 레이어에 속해 있습니다: " + hoveredObject.name);
-                Debug.Log(hoveredObject.layer);
-                Debug.Log($"{hoveredObject.layer}");
-            }
-            else
-            {
-                Debug.Log("지정된 레이어에 속하지 않는 오브젝트입니다.");
             }
         }
     }
