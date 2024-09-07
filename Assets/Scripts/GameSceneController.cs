@@ -26,10 +26,6 @@ public class GameSceneController : MonoBehaviour
 
     private void Start()
     {
-        Cursor.visible = false;
-
-        Cursor.lockState = CursorLockMode.Confined;
-
         nickNameSettingPanelController = Instantiate(nickNameSettingPanelController);
     }
 
@@ -51,11 +47,11 @@ public class GameSceneController : MonoBehaviour
             {
                 if (inventoryPanelController.gameObject.activeSelf)
                 {
-                    inventoryPanelController.Show();
+                    inventoryPanelController.Hide();
                 }
                 else
                 {
-                    inventoryPanelController.Hide();
+                    inventoryPanelController.Show();
                 }
             }
         }
@@ -68,6 +64,11 @@ public class GameSceneController : MonoBehaviour
         previewPanelController = Instantiate(previewPanelController);
 
         itemManager.SetData();
+
+        Cursor.visible = false;
+
+        Cursor.lockState = CursorLockMode.Confined;
+
     }
 
     private void UpdateNickName()
