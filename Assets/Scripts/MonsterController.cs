@@ -82,7 +82,6 @@ public interface IMonsterState
     void ExitState(MonsterController monster);
 }
 
-// Idle 상태 클래스
 public class MonsterIdleState : IMonsterState
 {
     public void EnterState(MonsterController monster)
