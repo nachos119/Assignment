@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 
 public class InventorySlotController : SlotController
 {
+    public int index;
+
     public override void OnBeginDrag(PointerEventData eventData)
     {
         base.OnBeginDrag(eventData);
@@ -66,7 +68,7 @@ public class InventorySlotController : SlotController
         }
         else
         {
-            PlayerManager.Instance.UpdateEquip(item);
+            PlayerManager.Instance.UpdateEquip(item, index);
         }
     }
 }

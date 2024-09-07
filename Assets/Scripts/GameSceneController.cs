@@ -63,6 +63,8 @@ public class GameSceneController : MonoBehaviour
         equipPanelController = Instantiate(equipPanelController);
         previewPanelController = Instantiate(previewPanelController);
 
+        inventoryPanelController.Hide();
+
         itemManager.SetData();
 
         Cursor.visible = false;

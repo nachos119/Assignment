@@ -55,7 +55,9 @@ public class InventoryPanelController : MonoBehaviour
         var count = data.Count;
         for (int i = 0; i < count; i++)
         {
+            int index = i;
             inventorySlotList[i].UpdateItem(data[i]);
+            inventorySlotList[i].index = index;
         }
     }
 
